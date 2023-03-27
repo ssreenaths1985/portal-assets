@@ -1,0 +1,322 @@
+[
+  {
+    "id": "resource",
+    "name": "Resource",
+    "description": "Smallest learning entity",
+    "icon": "call_to_action",
+    "contentType": "Resource",
+    "primaryCategory": "Learning Resource",
+    "mimeType": "application/html",
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "available": true,
+    "children": [
+      "upload",
+      "link",
+      "assessment",
+      "activities"
+    ],
+    "enabled": false
+  },
+  {
+    "id": "upload",
+    "parent": "resource",
+    "name": "Upload file",
+    "icon": "insert_drive_file",
+    "available": true,
+    "enabled": true,
+    "contentType": "Resource",
+    "mimeType": "application/pdf",
+    "additionalMeta": {
+      "isExternal": false
+    },
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Learning Resource"
+  },
+  {
+    "id": "link",
+    "parent": "resource",
+    "name": "Youtube link",
+    "icon": "insert_link",
+    "available": true,
+    "enabled": true,
+    "contentType": "Resource",
+    "mimeType": "text/x-url",
+    "additionalMeta": {
+      "isExternal": true
+    },
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Learning Resource"
+  },
+  {
+    "id": "assessment",
+    "parent": "resource",
+    "name": "Create an assessment",
+    "icon": "playlist_add_check",
+    "available": true,
+    "enabled": true,
+    "contentType": "Resource",
+    "mimeType": "application/json",
+    "additionalMeta": {
+      "categoryType": "Assessment",
+      "resourceType": "Assessment"
+    },
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Learning Resource"
+  },
+  {
+    "id": "Survery_link",
+    "parent": "resource",
+    "name": "Survey link",
+    "icon": "insert_link",
+    "available": false,
+    "enabled": false,
+    "contentType": "Resource",
+    "mimeType": "application/survey",
+    "additionalMeta": {
+      "isExternal": true
+    },
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Learning Resource"
+  },
+  {
+    "id": "webModule",
+    "parent": "resource",
+    "name": "Webpage",
+    "icon": "language",
+    "available": false,
+    "enabled": false,
+    "contentType": "Resource",
+    "mimeType": "application/web-module",
+    "additionalMeta": {},
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Learning Resource"
+  },
+  {
+    "id": "activities",
+    "parent": "resource",
+    "name": "Activities",
+    "icon": "business",
+    "available": false,
+    "enabled": false,
+    "contentType": "Resource",
+    "mimeType": "application/html",
+    "hasRole": []
+  },
+  {
+    "id": "channel",
+    "name": "Channel Page",
+    "description": "Create a Channel Page",
+    "icon": "chrome_reader_mode",
+    "contentType": "Channel",
+    "mimeType": "application/channel",
+    "hasRole": [
+      "channel-creator",
+      "editor",
+      "admin"
+    ],
+    "available": false,
+    "enabled": false
+  },
+  {
+    "id": "kb",
+    "isCollection": true,
+    "name": "Knowledge Board",
+    "description": "Create a Knowledge Board",
+    "icon": "folder",
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "contentType": "Knowledge Board",
+    "available": false,
+    "enabled": false,
+    "hasRole": [
+      "kb-creator",
+      "editor",
+      "admin"
+    ]
+  },
+  {
+    "id": "ka",
+    "name": "Knowledge Artifact",
+    "description": "Create a Knowledge Artifact",
+    "icon": "folder",
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "contentType": "Knowledge Artifact",
+    "available": false,
+    "enabled": false,
+    "hasRole": [
+      "ka-creator",
+      "editor",
+      "admin"
+    ]
+  },
+  {
+    "id": "collection",
+    "isCollection": true,
+    "name": "Module",
+    "description": "Create a collection of Resources",
+    "icon": "call_to_action",
+    "contentType": "CourseUnit",
+    "available": false,
+    "enabled": true,
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Course Unit",
+    "additionalMeta": {
+      "visibility": "Parent"
+    }
+  },
+  {
+    "id": "course",
+    "isCollection": true,
+    "name": "Course",
+    "description": "Create a collection of module and resources.",
+    "icon": "video_library",
+    "contentType": "Course",
+    "available": true,
+    "enabled": true,
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Course",
+    "details": {
+      "title": "Welcome to content curation.",
+      "createTitle": "Course information",
+      "subTitle": "A few key suggestions for creating a robust course for your learners,",
+      "points": [
+        {
+          "icon": "error_outline",
+          "text": "Whenever possible try to create a module, which is a collection of resources, this helps to streamline the learning process."
+        },
+        {
+          "icon": "error_outline",
+          "text": "Please provide hi-res images whenever possible."
+        },
+        {
+          "icon": "error_outline",
+          "text": "Whenever possible please provide an introduction and conclusion for the course."
+        }
+      ]
+    }
+  },
+  {
+    "id": "learningPath",
+    "isCollection": true,
+    "name": "Program",
+    "description": "Create a collection of Courses.",
+    "icon": "library_books",
+    "contentType": "Course",
+    "available": true,
+    "enabled": true,
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "hasRole": [
+      "content_creator",
+      "editor",
+      "admin"
+    ],
+    "primaryCategory": "Program",
+    "details": {
+      "title": "Welcome to program curation",
+      "createTitle": "Program",
+      "subTitle": "Create a collection of Courses.",
+      "points": []
+    }
+  },
+  {
+    "id": "trainingPath",
+    "isCollection": true,
+    "name": "Training",
+    "description": "Create workshops and trainings.",
+    "icon": "local_library",
+    "contentType": "Training Path",
+    "available": true,
+    "enabled": false,
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "hasRole": [],
+    "primaryCategory": "Training Path"
+  },
+  {
+    "id": "bitesPath",
+    "isCollection": true,
+    "name": "Bites",
+    "description": "Create quick micro content.",
+    "icon": "view_carousel",
+    "contentType": "Bites Path",
+    "available": true,
+    "enabled": false,
+    "mimeType": "application/vnd.ekstep.content-collection",
+    "hasRole": [],
+    "primaryCategory": "Bites Path"
+  },
+  {
+    "id": "finalAssessment",
+    "isCollection": true,
+    "name": "Final Assessment",
+    "description": "Create a final assesment content",
+    "icon": "playlist_add_check",
+    "contentType": "CourseAssessment",
+    "available": false,
+    "enabled": false,
+    "mimeType": "application/vnd.sunbird.questionset",
+    "hasRole": [
+      "content_creator"
+    ],
+    "primaryCategory": "Course Assessment",
+    "details": {
+      "title": "Welcome to final assessment",
+      "createTitle": "Final Assessment",
+      "subTitle": "Create a final assesment content",
+      "points": []
+    }
+  },
+  {
+    "id": "practiceQuestionSet",
+    "isCollection": true,
+    "name": "Pratice Assessment",
+    "description": "Create a pratice assesment content",
+    "icon": "playlist_add_check",
+    "contentType": "PracticeQuestionSet",
+    "available": false,
+    "enabled": false,
+    "mimeType": "application/vnd.sunbird.questionset",
+    "hasRole": [
+      "content_creator"
+    ],
+    "primaryCategory": "Practice Question Set",
+    "details": {
+      "title": "Welcome to practice question set",
+      "createTitle": "Pratice Assessment",
+      "subTitle": "Create a pratice assesment content",
+      "points": []
+    }
+  }
+]
